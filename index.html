@@ -340,6 +340,8 @@
 <h1 id="可能遇到的问题"><a href="#可能遇到的问题" class="headerlink" title="可能遇到的问题"></a>可能遇到的问题</h1><h2 id="hexo-d无反应问题"><a href="#hexo-d无反应问题" class="headerlink" title="hexo d无反应问题"></a>hexo d无反应问题</h2><p>请看下是不是配置deploy的时候，自己配置地址的冒号 后面有没有多出两个空格</p>
 <h2 id="hexo-d-时发生异常错误"><a href="#hexo-d-时发生异常错误" class="headerlink" title="hexo d 时发生异常错误"></a>hexo d 时发生异常错误</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*** Please tell me who you are. </span><br><span class="line">Run </span><br><span class="line">git config --global user.email &quot;you@example.com&quot; git config --global user.name &quot;Your Name&quot;</span><br></pre></td></tr></table></figure>
 <p> 我们使用以下两个命令来输入用户名和邮箱即可<br> git config –global user.email “<a href="mailto:you@example.com" target="_blank" rel="noopener">you@example.com</a>”<br> git config –global user.name “Your Name” </p>
+<h2 id="创建标签时发生的错误"><a href="#创建标签时发生的错误" class="headerlink" title="创建标签时发生的错误"></a>创建标签时发生的错误</h2><p> 使用hexo new post 命令后在新的.md文件中如下加入tags选项后出现<br> 点击标签时发生404错误，原因是因为没有新建tags页面。<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> ---</span><br><span class="line">title: 个人博客的搭建</span><br><span class="line">date: 2019-01-06 18:28:33</span><br><span class="line">tags: </span><br><span class="line">	- 环境搭建</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<p>解决方法：<br>用”hexo new page tags”命令创建tags页面。<br><img src="/images/01.png" alt="菜单图片"><br>在tags文件夹下index.md文件中进行如下设置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2019-01-06 20:24:40</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
 
           
         
@@ -433,10 +435,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
+                <a href="/tags/index.html">
                   <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
